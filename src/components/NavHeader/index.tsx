@@ -3,12 +3,16 @@ import styles from './index.module.scss'
 import { Breadcrumb, Dropdown, MenuProps, Switch } from 'antd'
 import { useStore } from '@/store'
 import storage from '@/utils/storage'
+import { useNavigate } from 'react-router-dom'
 
 interface Props {}
 
 export default function ({}: Props) {
   // 解构store
   const { userInfo, collapsed, updateCollapsed } = useStore()
+
+  // 路由跳转
+  const navigate = useNavigate()
 
   const breadList = [
     {
@@ -39,7 +43,8 @@ export default function ({}: Props) {
   const onClick: MenuProps['onClick'] = ({ key }) => {
     if (key === 'logout') {
       storage.clearItem('token')
-      location.href = '/login?callback=' + encodeURIComponent(location.href)
+      // location.href = '/login?callback=' + encodeURIComponent(location.href)
+      navigate('/login')
     }
   }
 
