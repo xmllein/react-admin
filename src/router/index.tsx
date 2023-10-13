@@ -11,7 +11,7 @@ import AuthLoader from '@/router/AuthLoader'
 export const router = [
   {
     path: '/',
-    element: <Navigate to='/welcome' />,
+    element: <Navigate to='/login' />,
   },
   {
     path: '/login',
