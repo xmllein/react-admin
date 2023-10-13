@@ -1,0 +1,22 @@
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .loginWrapper {
+    border-radius: 4px;
+    padding: 50px;
+    width: 450px;
+    background: #fff;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+    .title {
+      margin: 0 0 30px;
+      line-height: 1.5;
+      font-size: 30px;
+      text-align: center;
+      color: #000;
+    }
+  }
+}
+
+
